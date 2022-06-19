@@ -6,7 +6,7 @@ const totalPerSecondDom = document.getElementById("perSecond");
 
 function generateNewState() {
     let request = new XMLHttpRequest();
-    request.open("GET", "../values/buildings.json", false);
+    request.open("GET", "./buildings.json", false);
     request.send(null)
     let buildingsJson = JSON.parse(request.responseText);
     generateBuildings(buildingsJson);
