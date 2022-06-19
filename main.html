@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CatClicker</title>
+    <script src="javascripts/basic.js" type="module" defer></script>
+    <script src="javascripts/click.js" type="module" defer></script>
+    <script src="javascripts/buildings.js" type="module" defer></script>
+    <script src="javascripts/saveload.js" type="module" defer></script>
+    <link rel="stylesheet" href="stylesheets/stylesheet.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+    <link rel="manifest" href="icon/site.webmanifest">
+</head>
+
+<body>
+    <div id="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#help">Help</a>
+        <a href="" id="save_button">Save</a>
+        <a href="" id="reset_button">Reset</a>
+    </div>
+
+    <div id="mainbody">
+        <div id="clicker-group">
+            <div id="banner">
+                <h1> Cat has received <span id="totalPats">200</span> pats </h1>
+                <h2> Receiving <span id="perSecond">0</span> pats/s </h2>
+            </div>
+            <div id="clickarea">
+                <img id="catpic" src="images/cat.jpg" alt="picture of cute cat" />
+            </div> 
+        </div>
+        <div id="building-group">
+        </div>
+    </div>
+</body>
+</html>
