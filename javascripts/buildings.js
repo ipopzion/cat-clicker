@@ -5,9 +5,11 @@ const totalPatsDom = document.getElementById("totalPats");
 const totalPerSecondDom = document.getElementById("perSecond");
 
 function generateNewState() {
-    fetch("../values/buildings.json")
-        .then(response => response.json())
-        .then(json => generateBuildings(json));
+    let request = new XMLHttpRequest();
+    request.open("GET", "../values/buildings.json", false);
+    request.send(null)
+    let buildingsJson = JSON.parse(request.responseText);
+    generateBuildings(buildingsJson);
 }
 
 function generateBuildings(buildingsJson) {
