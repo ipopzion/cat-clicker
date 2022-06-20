@@ -1,14 +1,12 @@
 import * as basic from "./basic.js";
+import { getBuildingsJson } from "./buildingsJson.js"
 
 const buildingGroup = document.getElementById("building-group");
 const totalPatsDom = document.getElementById("totalPats");
 const totalPerSecondDom = document.getElementById("perSecond");
 
 function generateNewState() {
-    let request = new XMLHttpRequest();
-    request.open("GET", "./buildings.json", false);
-    request.send(null)
-    let buildingsJson = JSON.parse(request.responseText);
+    let buildingsJson = getBuildingsJson()
     generateBuildings(buildingsJson);
 }
 
