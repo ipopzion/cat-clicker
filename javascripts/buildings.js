@@ -17,6 +17,7 @@ function generateBuildings(buildingsJson) {
             var icon = document.createElement("img");
             icon.setAttribute("class", "icon");
             icon.setAttribute("src", `../images/${buildingInfo["imageUrl"]}`);
+            icon.setAttribute("alt", `picture of ${buildingInfo["name"]}`)
 
             var counter = document.createElement("div");
             counter.setAttribute("class", "counter");
